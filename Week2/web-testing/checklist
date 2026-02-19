@@ -1,0 +1,8 @@
+Google Docs Checklist
+DVWA OWASP Top 10 Test Checklist
+•	 SQL Injection (sqlmap): sqlmap -u "http://192.168.1.200/login.php" --forms --batch
+•	 XSS Testing (manual): <script>alert('XSS')</script> in all inputs
+•	 Auth Bypass: ' OR 1=1 -- in username field
+•	 Session Token Theft: Burp Repeater cookie manipulation
+•	 CSRF Check: No tokens found in POST requests
+•	 Self-Curated Script: Custom XSS polyglot payload
