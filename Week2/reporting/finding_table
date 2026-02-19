@@ -1,0 +1,6 @@
+Findings Table
+Finding ID	Vulnerability	CVSS Score	Remediation
+F001	SQL Injection	9.1	Input validation (PDO prepared statements)
+F002	Weak Password	7.5	Enforce complexity, account lockout
+F003	XSS Reflected	6.1	Content-Security-Policy headers
+F004	CSRF Missing	5.4	Synchronizer tokens
