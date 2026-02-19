@@ -1,0 +1,21 @@
+OWASP ZAP Quick Scan
+
+# Browser → ZAP Proxy → http://192.168.1.200/dvwa/
+# Active Scan → Full Audit → Alerts: High (SQLi), Medium (XSS)
+Execution Workflow (30 Minutes)
+1. DVWA Setup
+text
+# security=low (critical vulns)
+# Login: admin/password
+# Create DB: /setup.php
+2. Burp Suite (Proxy Tab)
+text
+# Firefox → Manual Proxy: 127.0.0.1:8080
+# Intercept login → SQLi bypass → Screenshot
+# Repeater → Session hijacking → Screenshot
+3. sqlmap Terminal
+text
+# Run above commands → Screenshot dumps
+4. Payload Testing
+text
+XSS Polyglot: jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>sh</bOdY/
