@@ -1,0 +1,4 @@
+100-Word Non-Technical Manager Briefing
+Security Assessment Results
+Your web application had serious security flaws equivalent to leaving the vault door unlocked. Attackers could steal all customer data, impersonate admins, and run malicious code through simple form inputs. We demonstrated these risks using industry-standard tools, then applied fixes—post-fix scans show clean results.
+Business Impact: Data breach costs average $4.45M (IBM). Monthly scans recommended to maintain security posture. Like installing deadbolts after a break-in demonstration—problem solved, but requires ongoing vigilance. Total fix time: 4 hours. Ready for production deployment.
