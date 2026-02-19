@@ -1,0 +1,10 @@
+Test Results Log Table
+Test ID	Vulnerability	Severity	Target URL
+001	SQL Injection	Critical	http://192.168.1.200/login
+
+002	XSS Reflected	Medium	http://192.168.1.200/form
+
+003	Weak Auth Bypass	High	http://192.168.1.200/dvwa/login.php
+
+004	CSRF Missing	Medium	http://192.168.1.200/vulnerabilities/csrf/
+
