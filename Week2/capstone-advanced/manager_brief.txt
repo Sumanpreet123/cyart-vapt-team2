@@ -1,0 +1,5 @@
+Non-Technical Manager Briefing (100 Words)
+Critical Server Compromise Demo Complete
+Your web server had a "master key" vulnerability (Drupalgeddon2) allowing attackers full remote control within 4 minutes. We scanned (OpenVAS), confirmed the flaw, exploited it (Metasploit), and gained administrator access—extracting all database contents.
+Fix Applied: Updated Drupal/Apache software, hardened configurations. Post-fix scans: clean bill of health.
+Business Risk: Attackers could've stolen customer data, installed ransomware, or pivoted to other systems. Cost: $200K+ recovery estimated. Monthly automated scans now implemented. Like changing locks after finding skeleton key duplicated. Production-ready.
