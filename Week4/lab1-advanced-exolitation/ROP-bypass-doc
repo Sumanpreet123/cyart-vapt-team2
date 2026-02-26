@@ -1,0 +1,1 @@
+Ghidra analysis of vulnerable binary revealed gadgets. ROP chain: pop rdi; ret (0x40123e) → system (0x7ffff7a05b90 leaked via puts@GOT) → "/bin/sh" (stack pivot). Bypassed ASLR by leaking libc base from GOT entry (puts offset). Executed: ROPgadget --binary vuln --string "/bin/sh". Shell gained
