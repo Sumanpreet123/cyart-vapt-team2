@@ -1,0 +1,10 @@
+Remediation & OpenVAS Rescan
+Fixes Applied:
+
+apt update && apt upgrade vsftpd → 3.0.5
+
+ufw deny 21 → FTP blocked
+
+/etc/vsftpd.conf → chroot_local_user=YES
+
+OpenVAS Post-Scan: 0 Critical/High vulns remaining
