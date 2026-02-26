@@ -1,0 +1,15 @@
+Non-Technical Summary for Executives
+
+Our security team conducted a simulated cyber attack on your test server and found a critical backdoor allowing full remote control. Attackers could steal all data within 30 minutes.
+
+The Fix (Already Done):
+✅ Server software patched
+✅ FTP service disabled
+✅ Firewall rules hardened
+✅ Fresh security scan = CLEAN
+
+Business Impact Prevented: Data breaches, ransomware, downtime costing ₹10-50 lakhs
+
+Next Steps: Monthly automated scans + quarterly full tests
+
+Your systems are now enterprise-grade secure.
