@@ -1,0 +1,1 @@
+DVWA API exposed critical BOLA (id=1→2 accessed user data) and GraphQL injection (schema dump via comment termination). Burp confirmed mass IDOR; Postman automated fuzzing. No rate limits. CVSS 9.1/10. Fix: RBAC enforcement, query parameterization, JWT validation. Retest: All blocked.
