@@ -1,0 +1,4 @@
+POST /graphql
+{"query":"{users(id:1){id name password}}"} → Normal
+Injection: {"query":"{users(id:1){id name password}"); DROP TABLE users; --"} 
+→ Error reveals DB schema + partial dump
