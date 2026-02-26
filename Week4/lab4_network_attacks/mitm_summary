@@ -1,0 +1,1 @@
+Ettercap ARP poisoned gateway→victim; intercepted HTTP logins (admin:password), SMB shares (\victim\IPC$). SSLStrip bypassed HTTPS→HTTP downgrade. Captured NTLMv2 hashes (Responder) + session cookies. Full traffic PCAP saved. Defender: Static ARP, WPA3, SMB signing required
