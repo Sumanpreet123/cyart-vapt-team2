@@ -1,0 +1,5 @@
+Attack Log
+Target: Metasploitable2 VM (SMBv1 exposed, perfect relay lab)
+
+Attack ID	Technique	Target IP	Status	Outcome
+015	SMB Relay	192.168.1.200	Success	NTLM Hash
