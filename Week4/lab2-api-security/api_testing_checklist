@@ -1,0 +1,5 @@
+✅ Enumerate endpoints: dirbuster /api/ → Found /users, /graphql, /v1/admin
+✅ BOLA test: Burp Repeater id=1→2 → Unauthorized access confirmed
+✅ GraphQL fuzz: Postman collection → Injection dumped schema
+✅ Rate limiting: 100 req/min → No blocks (business logic flaw)
+✅ Auth bypass: JWT token null/empty → Still accessible
