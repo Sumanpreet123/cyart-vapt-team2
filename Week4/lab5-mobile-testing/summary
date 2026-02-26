@@ -1,0 +1,1 @@
+Summary (47 words): Frida hooked LoginActivity.checkLogin() → forced return true, bypassing PIN/password. Accessed Banking dashboard + account balances without creds. Exposed SharedPrefs keys (admin:123456). Drozer confirmed exported ContentProvider leaking user data. Mitigate: ProGuard obfuscation, EncryptedSharedPrefs, runtime integrity checks
