@@ -1,0 +1,27 @@
+Executive Summary
+Full VAPT engagement on HTB-Lame (192.168.1.200) identified critical RCE via vsftpd 2.3.4 backdoor (CVSS 10.0). Complete system compromise achieved in 30 minutes. Root access obtained; all credentials extracted. Post-remediation: Zero vulnerabilities remain.
+
+Attack Timeline
+17:30 - Nmap discovered FTP vsftpd 2.3-4
+17:45 - Metasploit VSFTPD backdoor → root shell
+18:00 - hashdump, proof.txt extraction
+18:15 - OpenVAS baseline (17 High vulns)
+18:45 - Remediation + OpenVAS rescan (0 vulns)
+
+Technical Findings
+
+CVE-2011-2523: vsftpd 2.3.4 backdoor (:) → root shell
+
+CVSS 10.0: Remote code exec, no auth required
+
+Impact: Complete server control, data exfiltration
+
+Remediation Plan
+
+Immediate: Upgrade vsftpd ≥3.0.5, UFW deny tcp/21
+
+Short-term: Patch management (unattended-upgrades), disable unused services
+
+Long-term: Least privilege, network segmentation, vuln scanning (OpenVAS weekly)
+
+Verification: OpenVAS rescans confirm zero critical/high risks
