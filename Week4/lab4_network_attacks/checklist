@@ -1,0 +1,7 @@
+NETWORK ATTACKS CHECKLIST ✅
+□ Responder: Capture NTLM hashes (SMB=Off in config)
+□ Ettercap: ARP spoof GW→Victim (IP forwarding ON)
+□ Wireshark: http + smb + kerberos filters
+□ Crack hashes: hashcat -m 5600 rocksyou.txt
+□ DNS spoof: ettercap → fake.google.com → phishing
+□ Cleanup: ettercap -q; pkill responder
