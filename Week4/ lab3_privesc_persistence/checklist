@@ -1,0 +1,9 @@
+PRIVILEGE ESCALATION CHECKLIST ✅
+□ Run LinPEAS enumeration (wget + execute)
+□ Identify SUID binaries (find, vim, nano highlighted)
+□ Exploit SUID find → root shell
+□ Verify root: id, whoami, cat /root/proof.txt
+□ Create cron persistence (/etc/crontab)
+□ Test persistence: reboot VM → nc listener
+□ Document: screenshots + command logs
+□ Cleanup: rm /tmp/backdoor.sh (optional)
