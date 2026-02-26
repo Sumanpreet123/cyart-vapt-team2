@@ -1,0 +1,7 @@
+Here's your complete Lab 3: Privilege Escalation & Persistence deliverable—ready for cyart-vapt-team/Week-4/lab3-privesc-persistence/. Uses VulnHub Kioptrix Level 1 (192.168.1.150) with classic SUID find exploit + stealthy cron persistence.
+
+Escalation Log
+Target: Kioptrix Level 1 VM (common SUID lab) - www-data → root via LinPEAS.
+
+Task ID	Technique	Target IP	Status	Outcome
+010	SUID Exploit	192.168.1.150	Success	Root Shell
