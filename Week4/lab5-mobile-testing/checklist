@@ -1,0 +1,7 @@
+MOBILE TESTING CHECKLIST ✅
+□ MobSF static: Upload test.apk → Insecure Storage (High)
+□ Frida dynamic: Hook login() → Bypass auth → Dashboard access
+□ Drozer IPC: Exported ContentProvider → User DB leak
+□ Verify findings: adb pull /data/data/.../shared_prefs/
+□ Report: OWASP Mobile Top 10 mappings (M2: Insecure Data)
+□ Cleanup: Uninstall test.apk from emulator
