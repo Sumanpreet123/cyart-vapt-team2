@@ -1,0 +1,16 @@
+Static Analysis Log
+MobSF Analysis (test.apk = InsecureBankv2):
+
+Test ID	Vulnerability	Severity	Target App
+016	Insecure Storage	High	test.apk
+
+MobSF Commands
+# Docker MobSF (your Kali has it from Week 2)
+docker run -it --rm -p 8000:8000 opensecurity/mobsf
+# Upload test.apk → http://localhost:8000
+
+# Key Findings:
+- SharedPreferences: Credentials stored plaintext (/data/data/com.android.insecurebankv2/shared_prefs/)
+- SQLite DB: /data/data/.../databases/IndusBank.db (no encryption)
+- strings.xml: HARDCODED_API_KEY=sk_test_xyz123
+- Permissions: INTERNET + WRITE_EXTERNAL_STORAGE (over-permissive)
