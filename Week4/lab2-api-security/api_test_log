@@ -1,0 +1,6 @@
+API Test Log
+DVWA setup: security=low, API endpoints exposed at /api/ (common in training envs).
+
+Test ID	Vulnerability	Severity	Target Endpoint
+008	BOLA (IDOR)	Critical	/api/users
+009	GraphQL Injection	High	/graphql
