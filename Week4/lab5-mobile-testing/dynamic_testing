@@ -1,0 +1,6 @@
+# Terminal 1: Frida server on rooted emulator
+adb push frida-server /data/local/tmp/
+adb shell "chmod 755 /data/local/tmp/frida-server && /data/local/tmp/frida-server &"
+
+# Terminal 2: Hook script
+frida -U -f com.android.insecurebankv2 -l bypass_auth.js --no-pause
